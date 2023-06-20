@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true">
+
+    <LinearLayout
+        android:id="@+id/ll_cardMoeda"
+        android:layout_width="327dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/retangulo"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/txtNomeMoeda"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2.4dp"
+            android:padding="14dp"
+            android:textColor="#FFFFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:text="USD">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtVariacaoMoeda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginEnd="20dp"
+            android:gravity="right"
+            android:textColor="#FF7ED321"
+            android:textSize="20sp"
+            tools:text="0,53%" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

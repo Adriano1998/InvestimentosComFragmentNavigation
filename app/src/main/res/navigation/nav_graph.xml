@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.investimentosfragmentnavigation.ui.FragmentHome"
+        tools:layout = "@layout/home_fragment"
+        android:label="FragmentHome" >
+
+        <action
+            android:id="@+id/acao_fragmentHome_para_fragmentCambio"
+            app:destination="@id/fragmentCambio" >
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCambio"
+        android:name="com.example.investimentosfragmentnavigation.ui.FragmentCambio"
+        tools:layout="@layout/cambio_fragment"
+        android:label="FragmentCambio" >
+        <argument
+            android:name="MoedaModel"
+            app:argType="com.example.investimentosfragmentnavigation.model.MoedaModel" />
+        <action
+            android:id="@+id/acao_fragmentCambio_para_fragmentCompraVenda"
+            app:destination="@id/fragmentCompraVenda" />
+        <action
+            android:id="@+id/acao_fragmentCambio_para_fragmentCompraVenda2"
+            app:destination="@id/fragmentCompraVenda" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentCompraVenda"
+        tools:layout="@layout/compravenda_fragment"
+        android:name="com.example.investimentosfragmentnavigation.ui.FragmentCompraVenda"
+        android:label="FragmentCompraVenda" >
+
+        <argument
+            android:name="MoedaModel"
+            app:argType="com.example.investimentosfragmentnavigation.model.MoedaModel" />
+        <argument
+            android:name="quantidade"
+            app:argType="integer" />
+        <argument
+            android:name="total"
+            app:argType="float" />
+        <argument
+            android:name="ehCompra"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/acao_fragmentCompraVenda_para_fragmentHome"
+            app:destination="@id/fragmentHome"
+            app:popUpTo="@id/fragmentHome"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

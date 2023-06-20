@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cambioLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000">
+
+        <include
+            android:id="@+id/toolbarCambio"
+            layout="@layout/toolbar_generica" />
+
+        <LinearLayout
+            android:id="@+id/ll_cardMoeda"
+            android:layout_width="327dp"
+            android:layout_height="171dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="88dp"
+            android:background="@drawable/retangulo"
+            android:focusable="true"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/txtNomeMoedaCambio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtVariacaoMoedaCambio"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="15dp"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtNomeMoedaCambio"
+
+                />
+
+
+            <TextView
+                android:id="@+id/txtCompraMoedaCambio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/compra"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtVariacaoMoedaCambio"
+
+                />
+
+            <TextView
+                android:id="@+id/txtVendaMoedaCambio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/venda"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtCompraMoedaCambio"
+
+                />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtSaldoDisponivel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/saldo_disponivel_"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@id/ll_cardMoeda"
+            app:layout_constraintTop_toBottomOf="@id/ll_cardMoeda"
+
+            />
+
+        <TextView
+            android:id="@+id/txtEmCaixa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@id/txtSaldoDisponivel"
+            app:layout_constraintTop_toBottomOf="@id/txtSaldoDisponivel"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_quantidade"
+            android:layout_width="327dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/retanguloedttext"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/txtEmCaixa"
+            app:layout_constraintTop_toBottomOf="@id/txtEmCaixa"
+            app:layout_constraintVertical_bias="0.0">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtinpQuantidade"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Quantidade"
+                android:inputType="number"
+                android:maxLength="9"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textColorHint="#FFFFFF"
+
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnVender"
+            android:layout_width="151dp"
+            android:layout_height="43dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/retangulo"
+            android:backgroundTint="#3C8DBC"
+            android:text="vender"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/ll_quantidade"
+            app:layout_constraintTop_toBottomOf="@id/ll_quantidade"
+            app:layout_constraintVertical_bias="1.0">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnComprar"
+            android:layout_width="151dp"
+            android:layout_height="43dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/retangulo"
+            android:text="comprar"
+
+            android:textColor="#FFFFFF"
+
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/ll_quantidade"
+            app:layout_constraintTop_toBottomOf="@id/ll_quantidade"
+
+            app:layout_constraintVertical_bias="1.0">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <TextView
+            android:id="@+id/txtSaldoDisponivelVariavel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:importantForAccessibility="no"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toRightOf="@+id/txtSaldoDisponivel"
+            app:layout_constraintTop_toBottomOf="@+id/ll_cardMoeda" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

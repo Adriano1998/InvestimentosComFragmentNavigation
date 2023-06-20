@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">investimentosFragmentNavigation</string>
+    <string name="moedas">Moedas</string>
+    <string name="cambio">Câmbio</string>
+    <string name="saldo_disponivel">Saldo disponível: R$ </string>
+    <string name="Comprar">Comprar</string>
+    <string name="Vender">Vender</string>
+    <string name="quantidade">Quantidade</string>
+    <string name="em_caixa">em caixa</string>
+    <string name="vender_compraevenda">Vender</string>
+    <string name="home">HOME</string>
+    <string name="voltar_para_tela_de_cambio">Voltar para tela de cambio</string>
+    <string name="voltar_para_tela_home">Voltar para tela lista de moedas</string>
+    <string name="saldo_disponivel_">Saldo disponível:</string>
+    <string name="venda">Venda:</string>
+    <string name="compra">Compra:</string>
+    <string name="Moedas">Moedas</string>
+    <string name="espaco">" "</string>
+    <string name="espacoComTraco">" - "</string>
+    <string name="comprar">comprar</string>
+    <string name="vender">vender</string>
+    <string name="parabens">Parabéns!</string>
+    <string name="voce_acabou_de">Você acabou de "" </string>
+    <string name="totalizando">totalizando</string>
+    <string name="pula_linha">"\n"</string>
+    <string name="traco">-</string>
+    <string name="virgula">,</string>
+
+</resources>
